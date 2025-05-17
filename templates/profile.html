@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="profile-container">
+    <div class="profile-header">
+        <h2>{{ witcher.name }}</h2>
+        <p class="school">Школа: {{ witcher.school }}</p>
+    </div>
+    
+    <div class="profile-section">
+        <h3>Знаки:</h3>
+        <ul class="signs-list">
+            {% for sign in witcher.signs %}
+            <li>{{ sign }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+    <div class="profile-section">
+        <h3>Характеристики:</h3>
+        <div class="stats">
+            <p>Токсичность: {{ witcher.stats.toxicity }}%</p>
+            <p>Жизненная сила: {{ witcher.stats.health }}</p>
+            <p>Выносливость: {{ witcher.stats.stamina }}</p>
+            <p>Сила атаки: {{ witcher.stats.attack_power }}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

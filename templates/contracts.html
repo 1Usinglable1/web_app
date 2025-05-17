@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Контракты</h2>
+<table>
+    <tr>
+        <th>Монстр</th>
+        <th>Награда</th>
+        <th>Дата</th>
+    </tr>
+    {% for contract in contracts %}
+    <tr>
+        <td>{{ contract.monster }}</td>
+        <td>{{ contract.reward }} золота</td>
+        <td>{{ contract.date }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<p>Всего заработано: {{ calculate_total_gold(contracts) }} золота</p>
+<a href="{{ url_for('contracts_report') }}">Скачать отчет (CSV)</a>
+{% endblock %}

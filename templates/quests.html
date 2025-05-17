@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Отзывы о квестах</h2>
+
+<form method="POST" class="review-form">
+    <h3>Оставить отзыв</h3>
+    <input type="text" name="quest" placeholder="Название квеста" required>
+    <select name="rating" required>
+        <option value="5">★★★★★</option>
+        <option value="4">★★★★</option>
+        <option value="3">★★★</option>
+        <option value="2">★★</option>
+        <option value="1">★</option>
+    </select>
+    <textarea name="comment" placeholder="Ваш комментарий"></textarea>
+    <button type="submit">Отправить</button>
+</form>
+
+<div class="reviews">
+    {% for review in reviews %}
+    <div class="review">
+        <h4>{{ review.quest }}</h4>
+        <p>Рейтинг: {{ '★' * review.rating }}</p>
+        <p>{{ review.comment }}</p>
+        <small>Автор: {{ review.author }}</small>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

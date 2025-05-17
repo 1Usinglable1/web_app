@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<form method="POST" class="login-form">
+    <h2>Выберите школу ведьмака</h2>
+    <select name="school" required>
+        <option value="Волка">Школа Волка</option>
+        <option value="Гадюки">Школа Гадюки</option>
+        <option value="Грифона">Школа Грифона</option>
+    </select>
+    
+    <h3>Ваш ранг:</h3>
+    <label>
+        <input type="radio" name="rank" value="Новичок" checked> Новичок
+    </label>
+    <label>
+        <input type="radio" name="rank" value="Master"> Мастер
+    </label>
+    
+    <button type="submit">Войти</button>
+</form>
+{% endblock %}

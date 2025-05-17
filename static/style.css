@@ -1,0 +1,86 @@
+body {
+    font-family: 'Times New Roman', serif;
+    background-color: #1a1a1a;
+    color: #d9d9d9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0d0d0d;
+    padding: 1rem;
+    border-bottom: 2px solid #8b4513;
+}
+
+nav a {
+    color: #d9b38c;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #f2e6d9;
+}
+
+.profile-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #262626;
+    border: 1px solid #8b4513;
+    border-radius: 5px;
+}
+
+.profile-header h2 {
+    color: #d9b38c;
+    margin-bottom: 0.5rem;
+}
+
+.school {
+    font-style: italic;
+    color: #a6a6a6;
+}
+
+.signs-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.signs-list li {
+    padding: 0.5rem;
+    border-bottom: 1px solid #4d4d4d;
+}
+
+.stats p {
+    margin: 0.5rem 0;
+}
+
+.login-form, .review-form {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #262626;
+    border: 1px solid #8b4513;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+table, th, td {
+    border: 1px solid #8b4513;
+}
+
+th, td {
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.review {
+    background-color: #333;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-left: 3px solid #8b4513;
+}

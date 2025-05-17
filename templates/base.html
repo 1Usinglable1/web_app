@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ведьмак: {{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Школа Ведьмаков</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Профиль</a>
+            {% if 'school' in session %}
+                <a href="{{ url_for('contracts') }}">Контракты</a>
+                <a href="{{ url_for('quests') }}">Квесты</a>
+                <a href="{{ url_for('logout') }}">Выйти ({{ session['school'] }})</a>
+            {% else %}
+                <a href="{{ url_for('login') }}">Войти</a>
+            {% endif %}
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
